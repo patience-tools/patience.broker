@@ -1,3 +1,6 @@
 {
-  "extends": "eta/es6"
+  "extends": "standard",
+  "env": {
+    "node": true
+  }
 }
