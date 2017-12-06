@@ -1,0 +1,16 @@
+# js
+node_modules
+
+# Ignore config credentials
+conf.js
+
+# compiled
+dist
+
+# Ignore all logfiles and tempfiles.
+/log/*.log
+/tmp
+
+.DS_Store
+*~
+*.swp

@@ -1,0 +1,38 @@
+{
+  "name": "patience.broker",
+  "version": "0.0.1",
+  "description": "A crypto trading swarm",
+  "repository": "git+https://github.com/patience-tools/patience.broker.git",
+  "author": "github.com/catlover91",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/patience-tools/patience.broker/issues"
+  },
+  "homepage": "https://github.com/patience-tools/patience.broker#readme",
+  "standard": {
+    "parser": "babel-eslint"
+  },
+  "scripts": {
+    "lint": "standard --verbose app/*.js lib/*.js | snazzy",
+    "build": "webpack --config build/webpack.prod.js",
+    "dev": "node build/server.js",
+    "start": "node ./dist/broker.js"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "zenbot": "github:patience-tools/patience"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.1",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "friendly-errors-webpack-plugin": "^1.6.1",
+    "offline-plugin": "^4.8.4",
+    "snazzy": "^7.0.0",
+    "standard": "^10.0.3",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.2"
+  }
+}
