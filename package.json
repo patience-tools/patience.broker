@@ -41,6 +41,7 @@
     "offline-plugin": "^4.8.4",
     "snazzy": "^7.0.0",
     "standard": "^10.0.3",
+    "uglifyjs-webpack-plugin": "^1.1.2",
     "webpack": "^3.8.1",
     "webpack-dev-server": "^2.9.2"
   }

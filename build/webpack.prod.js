@@ -3,6 +3,7 @@ process.env.NODE_ENV = 'production'
 
 const webpack = require('webpack')
 const ProgressPlugin = require('webpack/lib/ProgressPlugin')
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 const OfflinePlugin = require('offline-plugin')
 const rm = require('rimraf')
 const base = require('./webpack.base')
@@ -20,7 +21,7 @@ base.plugins.push(
   new webpack.DefinePlugin({
     'process.env.NODE_ENV': JSON.stringify('production')
   }),
-  new webpack.optimize.UglifyJsPlugin({
+  new UglifyJSPlugin({ uglifyOptions: {
     sourceMap: true,
     compress: {
       warnings: false
@@ -28,7 +29,7 @@ base.plugins.push(
     output: {
       comments: false
     }
-  }),
+  }}),
   // extract vendor chunks
   new webpack.optimize.CommonsChunkPlugin({
     name: 'vendor',
