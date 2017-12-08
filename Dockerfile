@@ -11,5 +11,7 @@ RUN npm run build && npm run start
 
 ENV NODE_ENV production
 
+EXPOSE 80
+
 ENTRYPOINT ["/usr/local/bin/node", "index.js"]
 CMD []
